@@ -1,0 +1,205 @@
+
+.background-rojo{
+  background: rgb(228, 30, 30) !important;
+}
+
+.backgroundHover-rojo:hover{
+  background: rgb(228, 30, 30) !important;
+}
+
+.shadow-banner {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.65);
+}
+
+/*Banner de información*/
+.banner {
+      background-color: #8d8d8d; 
+      color: white;
+      font-weight: bold;
+      height: 40px;
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+      padding-top: 30px !important;
+      padding-bottom: 30px !important;
+      margin-bottom: 17px;
+    }
+
+    .banner-window {
+      width: 75%;        
+      overflow: hidden;    
+      position: relative;
+    }
+
+    .banner-track {
+      display: flex;
+      width: max-content;
+      animation: scroll 20s linear infinite;
+    }
+
+    .banner-item {
+      margin: 0 100px; 
+      white-space: nowrap;
+      font-size: 1.2rem;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+/*tarjetas*/
+.product-card {
+      border: 1px solid #eee;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #fff;
+      transition: all 0.3s ease-in-out;
+    }
+    .product-card:hover {
+      transform: scale(1.04) translateY(-3px);
+    }    
+    .offer-tag {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: red;
+      color: white;
+      font-size: 0.9rem;
+      padding: 3px 8px;
+      border-radius: 5px;
+    }
+    .product-price {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #000;
+    }
+    .product-old-price {
+      text-decoration: line-through;
+      color: #888;
+      font-size: 0.9rem;
+    }
+    .product-card p {
+      display: -webkit-box;      
+      -webkit-line-clamp: 2;        
+      -webkit-box-orient: vertical;
+      line-clamp: 2;              
+      box-orient: vertical;   
+      overflow: hidden;                 
+      text-overflow: ellipsis;
+    }
+    .qty-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0;
+    }
+    .qty-controls input {
+      width: 60px;
+      text-align: center;
+    }
+    .product-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+/*Categorías del menú de productos*/ 
+.categoria{
+  color: red !important;
+  font-weight: bold !important;
+}   
+.categoria:hover{
+  background-color: red !important;
+  color: white !important;
+}
+
+.subcategoria:hover{
+  color: red !important;
+}
+
+/*página-políticas de cambio y devolución*/
+.politicas {
+  display: flex;
+  flex-direction: column;
+}
+
+.politicas p, 
+.politicas ul {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/*seccion del Footer*/
+footer{
+  border-top: 2px solid #d6d6d6;
+  margin-top: 6.25rem;
+}
+
+.footer-red-section {
+  min-height: 130px;
+  display: flex;
+  align-items: center;
+  margin-top: 7rem !important;
+}
+
+/* Íconos de redes sociales*/
+.footer-icon-large {
+  font-size: 90px !important;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.footer-icon-large:hover {
+  transform: scale(1.2);
+}
+
+/* Íconos de información extra */
+.footer-icon-img-large {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.footer-icon-img-large:hover {
+  transform: scale(1.1);
+}
+
+/* Mapa responsivo */
+.map-container iframe {
+  width: 100%;
+  border: none;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-icon-large {
+    font-size: 40px;
+  }
+
+  .footer-icon-img-large {
+    width: 60px;
+    height: 60px;
+  }
+
+  .footer-red-section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}

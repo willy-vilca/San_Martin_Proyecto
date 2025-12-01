@@ -1,0 +1,21 @@
+{
+  "name": "gemini-chatbot-ai-main",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\"> Generación y Configuración de la API Key de Gemini</h1>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "node-localstorage": "^3.0.5",
+    "openai": "^6.7.0",
+    "pg": "^8.16.3"
+  }
+}

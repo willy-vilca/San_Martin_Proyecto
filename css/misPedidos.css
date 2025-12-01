@@ -1,0 +1,82 @@
+.pedido-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 25px;
+  transition: all 0.2s ease-in-out;
+}
+
+.pedido-card:hover {
+  transform: scale(1.01);
+  background-color: #f2f2f2;
+}
+
+.pedido-header p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.pedido-detalles {
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.pedido-detalles.mostrar {
+  display: block;
+  opacity: 1;
+}
+
+.detalle-item {
+  background: #fff;
+  border: 1px solid #eee;
+}
+
+.img-producto-pedido {
+  width: 90px;
+  height: 80px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.nombre-producto {
+  max-width: 25vw;
+  font-size: 1rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .nombre-producto {
+    max-width: 35vw;
+    font-size: 0.95rem;
+  }
+
+  .pedido-header {
+    text-align: start;
+  }
+
+  .img-producto-pedido {
+    width: 70px;
+    height: 65px;
+  }
+}
+
+@media (max-width: 430px) {
+  .nombre-producto {
+    max-width: 55vw;
+    font-size: 0.65rem;
+  }
+}
+
+.btn-outline-danger {
+  border: 1px solid rgb(228, 30, 30);
+  color: rgb(228, 30, 30);
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-outline-danger:hover {
+  background-color: rgb(228, 30, 30);
+  color: white;
+  transform: scale(1.03) translateY(-3px);
+}

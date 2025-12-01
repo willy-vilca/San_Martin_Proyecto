@@ -1,0 +1,29 @@
+  .custom-btn {
+    border-radius: 0; /* Quita lo redondeado */
+  }
+
+  .custom-btn:hover {
+    background-color: #dc3545; /* Rojo */
+    color: #fff; /* Blanco en hover */
+  }
+    .form-control.border-bottom {
+    border-bottom: 1px solid #000 !important;
+  }
+    .custom-form {
+    font-family: 'Poppins', sans-serif; /* Aplica la fuente */
+    font-size: 1.1rem; /* Tamaño más grande que el normal */
+  }
+    .btn-black {
+    background-color: #000;     /* Fondo negro */
+    color: #fff;                /* Texto blanco */
+    border: 1px solid #000;     /* Borde negro */
+    transition: all 0.3s ease;    /*  Animación suave */
+    font-family: 'Poppins', sans-serif; /* Aplica la fuente */
+    font-size: 1.1rem; /* Tamaño más grande que el normal */
+  }
+
+  .btn-black:hover {
+    background-color: #fff;     /* Fondo blanco */
+    color: #000;                /* Texto negro */
+    border: 1px solid #000;     /* Mantiene el borde negro */
+  }

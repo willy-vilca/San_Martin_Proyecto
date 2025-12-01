@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Principal - Distribuidora San Martín</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/estilos-generales.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="gemini-chatbot-ai-main/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+</head>
+<body class="bg-light">
+    <header>
+        <div class="container-fluid text-center background-rojo text-white fs-5 py-3 fw-bold">
+            Compra mínima en la Web: S/. 100.00
+        </div>
+        <div class="banner">
+            <div class="banner-window">
+                <div class="banner-track">
+                    <!-- Contenido duplicado para el bucle-->
+                    <div class="banner-item"><i class="bi bi-envelope-at"></i> pedidos@distribuidoraSanMartin.com.ar</div>
+                    <div class="banner-item"><i class="bi bi-telephone-outbound"></i> Teléfono: 3424440263</div>
+                    <div class="banner-item"><i class="bi bi-geo-alt"></i> Direccion: 11001 Pachacutec, Carretera de Tate, Ica</div>
+
+                    <div class="banner-item"><i class="bi bi-envelope-at"></i> pedidos@distribuidoraSanMartin.com.ar</div>
+                    <div class="banner-item"><i class="bi bi-telephone-outbound"></i> Teléfono: 3424440263</div>
+                    <div class="banner-item"><i class="bi bi-geo-alt"></i> Direccion: 11001 Pachacutec, Carretera de Tate, Ica</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row mb-3 mx-0 mx-lg-5">
+                <div class="col-md-2 text-start text-lg-end mt-2">
+                    <a href="index.html"><img style="height: 90px; width: auto;" src="img/index/logo empresa.png" alt="Logo de la empresa"></a>
+                </div>
+                
+                <div class="col-md-5 mt-3 ms-0 ms-lg-0" style="display: flex; align-self: center; flex-direction: row;">
+
+                    <input type="text" id="textoBuscado" placeholder="¿Qué estás buscando?"  style="width:100%;border: 1px solid #E21318; border-radius: 5px; border-bottom-right-radius: 0px; border-top-right-radius: 0px; height: 40px; padding: 10px">
+                    <div class="text-center" style="background: #E21318; width: 40px; height: 40px; border-radius: 5px; border-bottom-left-radius: 0px; border-top-left-radius: 0px; cursor: pointer">
+                        <span id="botonBusqueda"><i class="bi bi-search" style="font-size: 18px; line-height: 40px; color: #fff"></i></span>
+                    </div>
+
+                </div>
+                
+                <div class="col-md-5 mt-3 d-flex justify-content-start justify-content-md-end" style="flex-direction: row; align-self: center">
+
+                    <div class="text-center" style=" height: 50px;margin-right:5px">
+                        <!--Este botón abre el modal del carrito de compras-->
+                        <button class="btn btn-outline-dark py-3 px-xxl-5" data-bs-toggle="modal" data-bs-target="#cartModal"  style="width:100%;" type="button"><span id="carritoBotonPrincipal">CARRITO</span> <i class="bi bi-cart2" style="height: 16px; margin-left: 10px;"></i></button>
+                    </div>
+                    <div class="text-center" id="seccionUsuario" style=" height: 50px;margin-right:5px">
+                        <a href="login.html"><button type="button" class="btn btn-outline-danger py-3 px-xxl-5 backgroundHover-rojo" style="width:100%;">INGRESAR</button></a>
+                    </div>
+                </div>                
+            </div>
+        </div>
+
+        <!--Barra de navegación-->
+        <nav class="navbar navbar-expand-lg bg-transparent">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item me-3 ms-0 ms-xl-5">
+                            <!-- menú desplegable de productos -->
+                            <div class="dropdown">
+                                <button class="btn btn-danger background-rojo fw-bold mt-3 mt-lg-0 ms-3 ms-lg-0 dropdown-toggle" style="width:100%;height:45px" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                PRODUCTOS
+                                </button>
+                                <ul class="dropdown-menu ms-3 ms-lg-0 menuProductos">
+                                    <!--Las categorias y subcategorias se cargan de la BD-->
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item mx-3">
+                        <a class="nav-link fw-bold" aria-current="page" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                        <a class="nav-link active fw-bold" href="quienes-somos.html">¿QUIÉNES SOMOS?</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                        <a class="nav-link fw-bold" href="sucursales.html">SUCURSALES</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                        <a class="nav-link fw-bold" href="preguntas.html">PREGUNTAS FRECUENTES</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                        <a class="nav-link fw-bold" href="cambio y devolucion.html">CAMBIO Y DEVOLUCIÓN</a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <button type="button" id="botonVerMisPedidos" class="btn btn-dark fw-bold py-2 py-lg-1 py-xl-2" style="width:100%;" disabled><i class="bi bi-eye"></i> VER PEDIDOS</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Final del header-->
+
+    <!-- modal para mensajes al usuario -->
+    <div id="modalMensaje" class="modal-mensaje">
+        <div class="modal-contenidoMensaje">
+            <button class="modal-close">&times;</button>
+            <h2 id="modal-titulo"></h2>
+            <p id="modal-info"></p>
+        </div>
+    </div>
+
+
+    <div class="container-fluid text-center background-rojo text-white fs-2 py-4 shadow-banner mt-4">
+      <span class="fw-bold">¡CONOCE MÁS SOBRE NOSOTROS!</span>
+    </div>
+  <!-- SECCIÓN QUIÉNES SOMOS -->
+  <section class="quienes-somos container my-5">
+    <h2 class="text-center mb-4">¿Quiénes Somos?</h2>
+    <p class="text-center mb-5">
+      En <strong>Distribuidora San Martín</strong> nos especializamos en la venta y distribución de productos de alta calidad. 
+      Nuestro compromiso es llevar lo mejor a cada hogar, negocio y empresa, garantizando confianza, puntualidad y un servicio
+      de excelencia que nos distingue en el mercado.
+    </p>
+
+    <div class="row text-center mb-5">
+      <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="img/index/almacen.png" class="card-img-top" alt="Nuestro Almacén">
+          <div class="card-body">
+            <h5 class="card-title">Nuestro Almacén</h5>
+            <p class="card-text">Contamos con un amplio espacio de almacenamiento para garantizar stock permanente y la mejor logística de entrega.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="img/index/equipo.png" class="card-img-top" alt="Nuestro Equipo">
+          <div class="card-body">
+            <h5 class="card-title">Nuestro Equipo</h5>
+            <p class="card-text">Profesionales capacitados que trabajan día a día con pasión, asegurando un trato cercano y soluciones rápidas para cada cliente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MISIÓN, VISIÓN Y VALORES -->
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <h4 class="fw-bold">Misión</h4>
+        <p>Ofrecer productos de calidad a precios competitivos, brindando un servicio confiable y eficiente para satisfacer las necesidades de nuestros clientes.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h4 class="fw-bold">Visión</h4>
+        <p>Ser la distribuidora líder en la región, reconocida por nuestra seriedad, innovación y compromiso con el crecimiento de nuestros socios comerciales.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h4 class="fw-bold">Valores</h4>
+        <p>Confianza, responsabilidad, respeto, trabajo en equipo e innovación constante para mejorar nuestros procesos y la experiencia de nuestros clientes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <footer>
+        <div class="background-rojo text-white py-3 footer-red-section">
+            <div class="container">
+
+                <div class="row justify-content-around align-items-center text-center">
+                    <div class="col-12 col-md-5 me-5 d-flex justify-content-around align-items-center footer-social">
+                        <a href="#"><i class="fab fa-facebook fa-3x footer-icon-large"></i></a>
+                        <a href="#"><i class="fab fa-instagram fa-3x footer-icon-large"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp fa-3x footer-icon-large"></i></a>
+                    </div>
+
+                    
+                    <div class="col-12 col-md-5 ms-0 ms-sm-5 d-flex justify-content-around justify-content-sm-end align-items-center footer-extra">
+                        <div class="text-center mx-0 mx-sm-5 mt-4 mt-sm-0">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5949/5949054.png" alt="Envios" class="footer-icon-img-large">
+                        <p class="mt-2 mb-0">Envíos a Domicilio</p>
+                        </div>
+                        <div class="text-center mx-0  mx-sm-5 mt-4 mt-sm-0">
+                        <img src="https://img.freepik.com/vector-premium/icono-navegacion-tienda-graficos-vectoriales-negro_1178600-1146.jpg?w=360" alt="Sucursales" class="footer-icon-img-large">
+                        <p class="mt-2 mb-0">3 Sucursales</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3868.826080156572!2d-75.69865572531693!3d-14.146320384537802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91111fb2e3d06aa1%3A0xd219a3bef67ea7df!2sFUNDO%20Y%20BODEGA%20%22SAN%20MART%C3%8DN%22!5e0!3m2!1ses!2spe!4v1758150524201!5m2!1ses!2spe" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <div class="bg-black text-white fs-5 py-4 ps-0 ps-sm-5 text-center d-flex flex-column flex-md-row justify-content-start align-items-center gap-2">
+            <span class="ms-0 ms-sm-5">&copy; Copyright</span>
+            <span> Todos Los Derechos Reservados.</span>
+        </div>
+    </footer>
+
+    <!-- Modal del carrito -->
+    <div class="modal fade" id="cartModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header text-white">
+                    <h5 class="modal-title">MI PEDIDO</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body cart-body">
+                    <div id="cartItems"></div>
+                </div>
+                <div class="modal-footer flex-column cart-footer w-100">
+                    <div class="d-flex justify-content-between w-100 mb-2 px-3">
+                        <strong>TOTAL:</strong>
+                        <strong id="cartTotal">$0</strong>
+                    </div>
+                    <div class="cart-minimo-alert w-100 text-center mb-2 px-3" id="minimoMensaje">
+                        <span><i class="bi bi-info-circle-fill" id="icono-alerta"></i> El monto mínimo de compra es de <strong>S/. 100.00</strong></span>
+                    </div>
+                    <div class="d-flex flex-wrap justify-content-between w-100">
+                        <button class="btn btn-outline-dark me-2 flex-fill" data-bs-dismiss="modal">SEGUIR PIDIENDO</button>
+                        <button class="btn btn-outline-secondary me-2 flex-fill" onclick="finalizarPedido()" id="btnFinalizarPedido">FINALIZAR PEDIDO</button>
+                        <button class="btn btn-outline-danger flex-fill" onclick="vaciarCarrito()">VACIAR CARRITO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Botones flotantes -->
+    <div class="botones-flotantes">
+        <!-- Volver arriba -->
+        <button class="btn-volver-arriba" id="btnArriba">
+            <i class="bi bi-arrow-up"></i>
+        </button>
+        <!-- Carrito -->  
+        <button class="btn-flotante carrito" id="btnCarrito" data-bs-toggle="modal" data-bs-target="#cartModal">
+            <i class="bi bi-cart3"></i>
+            <span class="burbuja-carrito" id="burbujaCarrito">0</span>
+            <span class="texto-boton">Abrir carrito de pedido</span>
+        </button>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/51956190217" target="_blank" class="btn-flotante whatsapp">
+            <i class="bi bi-whatsapp"></i>
+            <span class="texto-boton">¡Consultanos por Whatsapp!</span>
+        </a>
+
+        <!--  Botón del chatbot con imagen PNG -->
+                <button id="chatbot-toggler" class="chatbot-button">
+                    <img src="robot.png" alt="Chatbot" class="chatbot-icon">
+                </button>
+
+
+            
+
+                <div class="chatbot-popup">
+                    <!--Chatbot Header-->
+                    <div class="chat-header">
+                        <div class="header-info">
+                            <svg class="chatbot-logo" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+                                <path d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z"></path>
+                            </svg>
+                            <h2 class="logo-text">Chatbot</h2>
+                        </div>
+                        <button id="close-chatbot" class="material-symbols-rounded">keyboard_arrow_down</button>
+                    </div>
+
+                    <!--Chatbot Body-->
+                    <div class="chat-body">
+                        <!---->
+                        <div class="message bot-message">
+                            <svg class="bot-avatar" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+                                <path d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z"></path>
+                            </svg>
+                            <div class="message-text">Hola!👋 <br /> ¿Cómo puedo ayudarte hoy?</div>
+                        </div>
+                    </div>
+
+                    <!--Chatbot Footer-->
+                    <div class="chat-footer">
+                        <form action="#" class="chat-form">
+                            <textarea placeholder="Message..." class="message-input" required></textarea>
+                            <div class="chat-controls">
+                                <button type="button" id="emoji-picker" class="material-symbols-outlined">sentiment_satisfied</button>
+                                <div class="file-upload-wrapper">
+                                    <input type="file" accept="images/*" id="file-input" hidden>
+                                    <img src="#">
+                                    <button type="button" id="file-upload" class="material-symbols-rounded">attach_file</button>
+                                    <button type="button" id="file-cancel" class="material-symbols-rounded">close</button>
+                                </div>
+                                <button type="submit" id="send-message" class="material-symbols-rounded">arrow_upward</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+    </div>
+
+    <!-- Modal Datos Personales -->
+        <div class="modal fade" id="modalDatosUsuario" tabindex="-1" aria-labelledby="modalDatosUsuarioLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content shadow-lg border-0">
+
+                <div class="modal-header py-3" style="background-color: rgb(228, 30, 30); color: white;">
+                    <h5 class="modal-title fw-bold w-100 text-center" id="modalDatosUsuarioLabel">
+                    Datos personales de la cuenta
+                    </h5>
+                </div>
+
+                <div class="modal-body px-4 py-3" id="cuerpoModalDatosUsuario">
+                    <form id="formDatosUsuario" class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label fw-semibold">Nombre</label>
+                        <input type="text" id="nombreUsuario" class="form-control input-datos" readonly>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label fw-semibold">Correo</label>
+                        <input type="email" id="correoUsuario" class="form-control input-datos" readonly>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label fw-semibold">Teléfono</label>
+                        <input type="text" id="telefonoUsuario" class="form-control input-datos" readonly>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label fw-semibold">DNI</label>
+                        <input type="text" id="dniUsuario" class="form-control input-datos" readonly>
+                    </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer d-flex justify-content-between">
+                    <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">Cerrar</button>
+                    <div>
+                    <button id="btnCambiarDatos" class="btn btn-danger px-4">Cambiar datos</button>
+                    <button id="btnConfirmarCambios" class="btn btn-success px-4 d-none">Confirmar cambios</button>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+
+    <script src="javaScript/funcionalidades.js"></script>
+    <script src="javaScript/cargarCategorias.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+    <script src="gemini-chatbot-ai-main/js/main.js"></script>
+</body>
+</html>
