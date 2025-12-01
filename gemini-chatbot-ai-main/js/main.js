@@ -756,7 +756,7 @@ function showProductDetail({ name, price, viewUrl, descripcion, stock, id }){
                     // El nombre puede venir HTML-escaped por data attributes (escapeHtml),
                     // decodificamos antes de construir la URL para que la búsqueda en BD coincida.
                     const rawName = decodeHtml(name);
-                    const api = 'http://localhost:3000/product?name=' + encodeURIComponent(rawName);
+                    const api = 'https://san-martin-proyecto.onrender.com:10000/product?name=' + encodeURIComponent(rawName);
                     const resp = await fetch(api);
                     if (!resp.ok) throw new Error('No encontrado');
                     const json = await resp.json();
@@ -895,7 +895,7 @@ const generateBotResponse = async (incomingMessageDiv) => {
 
     try {
         // Llamada a tu backend (server.js)
-        const response = await fetch("http://localhost:3000/chat", {
+        const response = await fetch("https://san-martin-proyecto.onrender.com:10000/chat", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ prompt: userData.message })
